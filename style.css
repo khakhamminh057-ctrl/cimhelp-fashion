@@ -1,0 +1,72 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:#1f2937;background:#fff}
+a{text-decoration:none;color:inherit}
+button,input,textarea,select{font:inherit}
+
+/* BÀI 1 */
+.admin-page{min-height:100vh;background:linear-gradient(135deg,#edf4ff,#f7fbff);padding:28px 16px}
+.admin-wrap{max-width:900px;margin:auto}
+.admin-header{text-align:center;padding:18px}
+.admin-header .cap{font-size:30px}
+.admin-header h1{font-size:30px;color:#183b73;margin:5px 0 8px}
+.admin-header p{color:#3673d4;word-spacing:12px}
+.product-form{background:#fff;border:1px solid #e0e7f2;border-radius:18px;padding:28px;box-shadow:0 12px 35px rgba(36,76,130,.08)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 18px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+.field label{font-weight:700;font-size:14px}
+.field label span{color:#e33}
+.field input,.field select,.field textarea{border:1px solid #94b8a3;border-radius:9px;padding:12px 13px;outline:none;background:#fff;transition:.2s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#3a3894;box-shadow:0 0 0 4px #ebf0fe}
+.field textarea{min-height:130px;resize:vertical}
+.price-note{display:inline-block;margin-top:20px;padding:11px 15px;background:#dff9e9;border:1px solid #75df9e;border-radius:20px;color:#167344}
+.form-actions{display:flex;justify-content:center;gap:12px;margin-top:22px;flex-wrap:wrap}
+.btn{border:0;border-radius:25px;padding:12px 24px;font-weight:700;cursor:pointer;transition:.2s}
+.btn.primary{background:#4b8ff3;color:#fff;box-shadow:0 8px 18px #c9dbf9}
+.btn.primary:hover{transform:translateY(-4px);box-shadow:0 12px 24px #b9cff3}
+.btn.reset{background:#f7f7f7;border:1px dashed #c7ccd5}
+.btn.shop-link{background:#182c4d;color:#fff}
+.form-message{text-align:center;margin-top:14px;color:#16824d;font-weight:700;min-height:20px}
+
+/* BÀI 2 */
+.shop-page{background:#fff;max-width:1100px;margin:auto;border-left:1px solid #222;border-right:1px solid #222}
+.topbar{min-height:102px;border-bottom:1px solid #222;display:grid;grid-template-columns:2fr 1fr}
+.promo{display:flex;align-items:center;padding:15px;font-size:18px;font-weight:700}
+.top-actions{border-left:1px solid #222;padding:9px;display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:14px;font-weight:700}
+.top-actions input{grid-column:1/-1;height:30px;padding:4px 8px;border:1px solid #222}
+.main-nav{display:grid;grid-template-columns:1fr 1.2fr 1fr 1fr;border-bottom:1px solid #222}
+.main-nav a{padding:9px;text-align:center;border-right:1px solid #222;font-weight:700}
+.main-nav a:hover{background:#eef4ff}
+.shop-layout{display:grid;grid-template-columns:145px 1fr;min-height:390px}
+.sidebar{border-right:1px solid #222;padding:12px 8px}
+.sidebar h3{font-size:15px;margin-bottom:12px}
+.sidebar p{font-size:13px;line-height:1.5;margin-bottom:10px}
+.side-filter{display:block;width:100%;background:none;border:0;text-align:left;padding:7px 4px;cursor:pointer}
+.side-filter:hover,.side-filter.active{background:#e8eefb;font-weight:700}
+.all-cat{margin-top:8px;border-top:1px solid #ddd}
+.products{padding:12px 10px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.product-card{border:1px solid #ddd;padding:8px;display:flex;flex-direction:column;gap:7px;min-width:0}
+.product-card a{display:block}
+.product-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.product-name{font-weight:700;font-size:15px}
+.product-info{font-size:13px;color:#555;line-height:1.4}
+.price{font-weight:700;color:#c62828}
+.old-price{text-decoration:line-through;color:#888;font-weight:400;margin-right:5px}
+.badge{display:inline-block;background:#fff0f0;color:#c62828;padding:3px 6px;border-radius:4px;font-size:11px;font-weight:700}
+.footer{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #222}
+.footer>div{padding:12px;border-right:1px solid #222;min-height:80px}
+.footer h3{font-size:14px;margin-bottom:8px}
+.footer p{font-size:13px}
+
+@media(max-width:700px){
+ .form-grid{grid-template-columns:1fr}
+ .field.full{grid-column:auto}
+ .topbar{grid-template-columns:1fr}
+ .top-actions{border-left:0;border-top:1px solid #222}
+ .shop-layout{grid-template-columns:1fr}
+ .sidebar{border-right:0;border-bottom:1px solid #222}
+ .products{grid-template-columns:repeat(2,1fr)}
+ .main-nav{grid-template-columns:1fr 1fr}
+ .footer{grid-template-columns:1fr}
+}
+@media(max-width:430px){.products{grid-template-columns:1fr}}

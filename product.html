@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chi tiết sản phẩm</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-page">
+<div class="admin-wrap">
+  <div class="product-form">
+    <h1 id="detailName">Chi tiết sản phẩm</h1>
+    <p style="margin:12px 0">Đây là trang thông tin đặt hàng của sản phẩm đầu tiên trên trang chủ.</p>
+    <div id="detail"></div>
+    <div class="form-actions">
+      <a class="btn primary" href="index.html">← Quay lại cửa hàng</a>
+      <a class="btn shop-link" href="admin.html">Quản trị sản phẩm</a>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+<script>
+const id=new URLSearchParams(location.search).get("id")||"SP01";
+const p=products.find(x=>x.id===id)||products[0];
+document.getElementById("detailName").textContent=p.name;
+document.getElementById("detail").innerHTML=`
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:start">
+  <img src="${p.img}" alt="${p.name}" style="width:100%;border-radius:12px">
+  <div>
+    <p><b>Mã sản phẩm:</b> ${p.id}</p>
+    <p><b>Danh mục:</b> ${p.cat}</p>
+    <p><b>Chất liệu:</b> Cotton/Denim cao cấp</p>
+    <p><b>Màu sắc:</b> Đa dạng</p>
+    <p style="font-size:22px;color:#c62828;font-weight:700;margin:15px 0">${p.price.toLocaleString("vi-VN")}đ</p>
+    <button class="btn primary" onclick="alert('Đã ghi nhận yêu cầu đặt hàng sản phẩm ${p.name}!')">Đặt hàng</button>
+  </div>
+</div>`;
+</script>
+</body>
+</html>

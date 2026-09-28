@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion House - Bài 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="shop-page">
+  <header class="topbar">
+    <div class="promo">✨ CHÈN ẢNH ĐỘNG KHUYẾN MÃI ✨</div>
+    <div class="top-actions">
+      <span>Chia sẻ</span>
+      <span>Đăng nhập</span>
+      <span>🛒 Giỏ hàng</span>
+      <span>Đăng ký</span>
+      <input id="searchInput" type="search" placeholder="Tìm kiếm...">
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <a href="#" data-filter="all">Danh mục sản phẩm</a>
+    <a href="#" data-filter="all">Tất cả sản phẩm</a>
+    <a href="#" data-filter="new">Hàng mới về</a>
+    <a href="#" data-filter="sale">Khuyến mãi</a>
+  </nav>
+
+  <div class="shop-layout">
+    <aside class="sidebar">
+      <h3>Danh mục các loại hàng</h3>
+      <p>Danh mục bán các loại sản phẩm cụ thể:</p>
+      <button class="side-filter" data-cat="Áo">Áo</button>
+      <button class="side-filter" data-cat="Quần">Quần</button>
+      <button class="side-filter" data-cat="Váy">Váy</button>
+      <button class="side-filter" data-cat="Áo khoác">Áo khoác</button>
+      <button class="side-filter" data-cat="Túi">Túi</button>
+      <button class="side-filter" data-cat="Phụ kiện">Phụ kiện</button>
+      <button class="side-filter all-cat" data-cat="all">Tất cả</button>
+    </aside>
+
+    <main class="products" id="productGrid"></main>
+  </div>
+
+  <footer class="footer">
+    <div>
+      <h3>Thông tin liên hệ đặt hàng:</h3>
+      <p>☎ 0987 654 321 · ✉ fashionhouse@example.com</p>
+    </div>
+    <div>
+      <h3>Hiển thị lượt truy cập khách hàng</h3>
+      <p>👥 <span id="visits">0</span> lượt truy cập</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
